@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Knick';
+  src: url('../fonts/Knick.ttf') format('truetype');
+}
+
+@font-face {
+  font-family:'Heroic';
+  src: url('../fonts/Heroic.ttf') format('truetype');     
+}
+
+#home-body{
+background: #161717 url(../images/knick3.jpg) no-repeat center top;
+}
+
+a, a:visited{
+	color:white;
+}
+
+a:hover{
+	color:gray;
+}
+
+p{
+margin: 0;
+}
+
+header{
+	height:100px;
+	position:fixed;
+	width:100%;
+}
+
+.header-fixed{
+	position:fixed;
+	top:-100px;
+	height:100px;
+	width:100%;
+	z-index:999;
+	border-bottom: 4px solid white;
+	background-color: #161717;
+	transition:0.2s top cubic-bezier(.3, .73, .3, .74);
+}
+
+body.down .header-fixed{
+    top:0;
+}
+
+.logo{
+	position:relative;
+	top:20px;
+	display:inline;
+}
+
+body.down .logo img{
+	height:60px;
+}
+
+
+nav{
+	float:right;
+	margin: 20px 0 0 0;
+	font-family:'Knick';
+	font-size:30px;
+	color:white;
+}
+
+nav a{
+display:inline-block;	
+padding:5px;
+margin-right:5px;
+}
+
+nav a:last-child{
+	margin-right:0px;
+}
+
+.main-wrapper{
+	position: relative;
+	top:310px;
+	background-color:#161717;
+	height:auto;
+	color:white;
+	padding:0 0 10px 0;
+}
+
+.cinemax-logo{
+	width:250px;
+	position:absolute;
+	left:-20px;
+	top:-20px;
+	z-index: 899;
+}
+
+.main-video{
+    padding:15px 0px ;
+}
+
+.video-js{
+	width:100%;
+    height:555px; 
+    
+}
+
+.vjs-big-play-button{
+	text-align: center;
+}
+
+.content h1, .sidebar h1 {	
+	margin:0px;
+	color:white;
+	padding-bottom:15px;
+	font-family:'Heroic';
+	text-transform:uppercase;
+	font-size:40px;
+}
+
+.content img{
+	border:4px solid white;
+}
+
+.content, .sidebar{
+	height:auto;
+	padding:20px 15px 0 0;
+}
+
+.sidebar{
+	float:right;
+	height:900px;
+}
+
+.content .column{
+	padding-bottom:10px;
+}
+
+.extras{
+	padding-top:20px;
+}
+
+.about{
+	border-bottom: 1px solid black;
+	padding-bottom: 15px;
+}
+
+.twitter{
+	padding-top:16px;
+	border-top: 1px solid #777676;
+	height: 500px
+}
+
+/*Cast Page*/
+
+#cast-body{
+	background: #161717 url(../images/thack.jpg) no-repeat center top;
+}
+
+.cast-main{
+	padding-left:15px;
+	font-family:'Heroic';
+}
+
+.cast-main h1 {
+	font-family:'Heroic';
+	text-align:center;
+	font-size:70px;
+	text-transform:uppercase;
+	margin:30px 0 15px 0;
+	padding:5px 0;
+}
+
+
+.cast-info p{
+	line-height:1.2 !important;
+	font-size:28px;	
+}
+
+.cast-info p:nth-of-type(2n){
+	font-size:24px;
+	color:#CACACA;
+	
+}
+.cast-info img{
+	margin-bottom:7px;
+	border:4px solid white;
+}
+footer{
+	position: relative;
+	top:310px;
+	height:200px;
+	width:100%;
+	background-color:white !important; 
+	color:black;
+	text-align: center;
+	padding-top:30px;}
+footer p{
+	margin:20px 0 0 0;
+}
+footer a, footer a:visited{
+	color:black;
+	padding:0px 10px;
+	font-weight:bold;}

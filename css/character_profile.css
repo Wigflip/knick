@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+  font-family:'Heroic';
+  src: url('../fonts/Heroic.ttf') format('truetype');     
+}
+
+.content{
+	background-color:#161717;	
+	height:1000px;
+	width:1135px;
+	color:white;
+	padding:0px 0 0 0;
+}
+
+.gallery{
+	height:500px;
+	float:left;
+	width:40%;
+	padding:5px;
+	}
+	
+.character-bio{
+	float:right;
+	height:500px;
+	width:60%;
+	padding:5px 0px 10px 20px;
+	}
+	
+.content h1{
+  margin:0 0 10px 0;	
+  font-size:55px;
+  padding:0px;
+  text-align:left;
+}
+
+.content h3{
+  font-family:'Heroic'; 
+  margin:0px;
+}
+
+.character-bio p{
+	font-size:22px;
+	margin-bottom: 20px;
+}
+
+.cast-info .column {
+	margin-bottom:25px;
+}
