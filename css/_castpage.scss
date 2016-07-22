@@ -1,0 +1,48 @@
+/*Cast Page*/
+
+#cast-body{
+	background: #161717 url(../../images/knick2.jpg) no-repeat center top;
+	background-size:contain;
+	background-position:0 -120px;
+
+	footer{
+		position:relative;
+		top:270px;
+	}
+}
+
+.content-cast{
+	@extend .content;
+	position:relative;
+	top:270px;
+	font-family:'Heroic';
+
+	h2{
+	font-family:'Heroic';
+	text-align:center;
+	font-size:60px;
+	text-transform:uppercase;
+	padding:20px 0 0 0;
+	}
+
+	p{
+		line-height:1.2 !important;
+		font-size:28px;	
+		&:nth-of-type(2n){
+			font-size:24px;
+			color:#CACACA;
+		}
+	}
+	img{
+		margin-bottom:7px;
+		border:4px solid white;
+	}
+	.column{
+		padding-bottom:30px;
+	}
+}
+
+.crew{
+	padding-top:70px;
+}
+

@@ -4,7 +4,7 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		concat: {
+		/*concat: {
 			//2. Configuration for concatinating files goes here.
 			dist:{
 				src: [
@@ -20,7 +20,7 @@ module.exports = function(grunt){
         		src: 'js/build/production.js',
         		dest: 'js/build/production.min.js'
     		}
-		},
+		},*/
 
 		sass: {
 		    dist: {
@@ -41,15 +41,15 @@ module.exports = function(grunt){
 		        files: ['css/*.scss'],
 		        tasks: ['sass'],
 		        options: {
-		            spawn: false,
-		        },
+		            spawn: false
+		        }
 		    },
 		        
 		    js:{
 		    	files: ['js/*.js'],
 		    	tasks: ['uglify'],
 		    	options:{
-		    		spawn; false,
+		    		spawn: false,
 		    	}
 		    }     
 		} 
@@ -62,6 +62,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	//4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-	grunt.registerTask('default', ['concat', 'uglify','sass','watch']);
+	grunt.registerTask('default', ['sass','watch']);
+	grunt.registerTask('prod', ['concat', 'uglify','sass','watch']);
 
 };
