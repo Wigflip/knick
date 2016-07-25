@@ -39,13 +39,16 @@ $(document).ready(function(){
 
 	//VIDEO CHANGE BASED ON LINK
 
-	$(".column").on("click", function(){
+	$(".featured .column").on("click", function(){
 		
-		var mess = $(this).find("p").html();
-		console.log(mess);
+		var mess = $(this).find("p").html(),
+			source = $(this).attr('data-video');
 
-		$(".main-video").find("h2").html(mess);
-		$(window).scrollTo(0, 0);
+		$(".main-video").find("h2").html(mess)
+		$(".main-video video").attr("src", source)
+							  .attr("autoplay", "true");	
+
+		$("html, body").animate({ scrollTop: 0 }, 200);
 
 	});
 

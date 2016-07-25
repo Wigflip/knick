@@ -7,8 +7,8 @@
   src: url("../../fonts/Heroic.ttf") format("truetype"); }
 /*Cast Page*/
 #cast-body {
-  background: #161717 url(../../images/knick2.jpg) no-repeat center top;
-  background-size: contain;
+  background: #161717 url(../../images/background/knick2.jpg) no-repeat center top;
+  background-size: cover;
   background-position: 0 -120px; }
   #cast-body footer {
     position: relative;
@@ -22,8 +22,7 @@
     font-family: 'Heroic';
     text-align: center;
     font-size: 60px;
-    text-transform: uppercase;
-    padding: 20px 0 0 0; }
+    text-transform: uppercase; }
   .content-cast p {
     line-height: 1.2 !important;
     font-size: 28px; }
@@ -40,7 +39,7 @@
   padding-top: 70px; }
 
 #home-body {
-  background: black url("../../images/thack.jpg") no-repeat center top;
+  background: black url("../../images/background/thack.jpg") no-repeat center top;
   background-size: cover; }
 
 a, a:visited {
@@ -183,7 +182,7 @@ nav {
 .about {
   border-bottom: 1px solid black;
   padding-bottom: 15px; }
-  .about p {
+  .about p:nth-of-type(2) {
     margin: 10px 0 0 0; }
 
 .extra-info {

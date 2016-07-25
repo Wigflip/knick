@@ -1,5 +1,5 @@
 #home-body{
-background: black url('../../images/thack.jpg') no-repeat center top;
+background: black url('../../images/background/thack.jpg') no-repeat center top;
 background-size:cover;
 }
 
@@ -12,6 +12,7 @@ a, a:visited{
 
 p{
 margin: 0;
+
 }
 
 
@@ -196,7 +197,7 @@ nav{
 	border-bottom: 1px solid black;
 	padding-bottom: 15px;
 
-	p{
+	p:nth-of-type(2){
 		margin:10px 0 0 0;
 	}
 }

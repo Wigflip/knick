@@ -1,8 +1,8 @@
 /*Cast Page*/
 
 #cast-body{
-	background: #161717 url(../../images/knick2.jpg) no-repeat center top;
-	background-size:contain;
+	background: #161717 url(../../images/background/knick2.jpg) no-repeat center top;
+	background-size:cover;
 	background-position:0 -120px;
 
 	footer{
@@ -22,7 +22,6 @@
 	text-align:center;
 	font-size:60px;
 	text-transform:uppercase;
-	padding:20px 0 0 0;
 	}
 
 	p{
