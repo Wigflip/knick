@@ -1,10 +1,11 @@
-
 $(document).ready(function(){
 	//Fixed Header
-    $("header").before($("header").clone().addClass("header-fixed"));
-    $(window).on("scroll", function () {
-    	$("body").toggleClass("down", ($(window).scrollTop() > 10));
-	});
+	if($("html").width() >= 1025){
+	    $("header").before($("header").clone().addClass("header-fixed"));
+	    $(window).on("scroll", function () {
+	    	$("body").toggleClass("down", ($(window).scrollTop() > 10));
+		});
+	}
 
 	//Twitter Widget
 	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
@@ -18,7 +19,7 @@ $(document).ready(function(){
 	     $(".main-wrapper").css("height", "1370px");
 	 }); 	
 
-	//About section - more button
+	//DESKTOP/TABLET About section - more button
 	var more = $(".more"),
 		less = $(".less"),
 		extra_info = $(".extra-info"); 
@@ -39,12 +40,12 @@ $(document).ready(function(){
 
 	//VIDEO CHANGE BASED ON LINK
 
-	$(".featured .column").on("click", function(){
-		
-		var mess = $(this).find("p").html(),
-			source = $(this).attr('data-video');
+	$(".featured .column, .mobile-feature").on("click", function(){
 
-		$(".main-video").find("h2").html(mess)
+		var mess = $(this).attr("data-name"),
+			source = $(this).attr('data-video');
+			
+		$(".main-video").find("h2").html(mess);
 		$(".main-video video").attr("src", source)
 							  .attr("autoplay", "true");	
 

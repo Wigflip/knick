@@ -1,0 +1,234 @@
+@media screen and (min-width:350px) and (max-width:906px){
+/*HOMEPAGE*/
+	#home-body{
+		background: none;
+	}
+
+	nav, .about-social, .featured-extras, .header-fixed{
+		display:none;
+	}	
+
+	header{
+		height:80px;
+		background-color:black;
+		z-index:999;
+
+		h3{	
+			position:relative;
+			top:-14px;
+			padding-right:24px;
+			display:inline;
+			float:right;
+			text-transform:uppercase;
+			font-family:'Heroic';
+			font-size:24px;
+			-webkit-user-select: none; /* Chrome/Safari */
+		}
+	}
+
+	.logo{
+		display:block;
+		text-align:center;
+
+		img{
+			height:41px;
+			width:141px;
+		}
+
+		h2{
+			display:none;
+		}
+	}
+
+	.mobile-nav{
+		position:fixed;
+		top:-57px;
+		/*left:1000%; slide in panel from left*/
+		height:56px;
+		width:100%;
+		padding:10px;
+		display:block;
+		background-color:black;
+		z-index:99;
+		transition: top .3s;
+		text-align:center;
+		border-top:1px solid white;
+
+		a{
+			font-family:'Heroic';
+			text-transform:uppercase;
+			font-size:24px;
+			padding:0 16px;
+		}
+	}
+
+	body.open-panel{
+		.mobile-nav{
+			/*left:59%; slide in panel from left*/
+			top:80px;
+		}
+	}
+
+	main{
+		position:relative;
+		top:80px;
+		overflow-x:hidden;
+	}
+
+	.video{
+		height:200px;
+		width:100%;
+
+		.main-video{
+			top:0;
+			height:100%;
+			width:100%;
+
+			h2{
+				font-size:25px;
+			}
+		}
+
+		.cinemax-logo{
+			display:none;
+		}
+
+		.video-js{
+			height:100%;
+		}
+	}
+
+	.mobile-content{
+		height:400px;
+		padding:0 20px;
+		margin:32px 0 0 0;
+		display:block;
+		
+
+		.title{
+			font-family:'Heroic';
+			font-size:25px;
+			padding: 10px 9px;
+			border-top:1px solid grey;
+			text-transform:uppercase;
+		}
+
+		hr{
+			width:97%;
+		}
+
+		.mobile-main{
+
+			margin-bottom:20px;
+
+			img{
+				width:100%;
+				border:1px solid white;
+			}
+
+			h4{
+				padding:10px 0;
+				margin: 0 0;
+				color:#8c8a8a;
+				font-size:20px;
+			}
+
+			p{
+				font-size:0.875rem;
+			}
+		}
+
+		.mobile-feature{
+
+			margin:0 0 25px 0;
+
+			img{
+				height:60px;
+				border:1px solid white;
+				float:left;
+			}
+
+			span{
+				padding:0 10px;
+				font-size:16px;
+			
+				&:nth-of-type(1){
+					color:grey;
+				}
+			}	
+		}
+	}
+
+	footer{
+		position:relative;
+		height:145px;
+		top:80px;
+		padding:15px 5px;
+
+		span{
+			margin:-12px 0 18px 0;
+			display:block;
+		}
+		
+		img{
+			height:30px;
+			width:auto;
+		}
+
+		.desktop-footer{
+			display:none;
+		}
+
+		p{
+			font-size:12px;
+		}
+
+		.mobile-footer{
+			margin:10px;
+			font-size:12px;
+
+			a{
+				padding:0 9px;
+				color:black;
+				font-weight:bold;
+			}
+		}
+	}
+
+
+	.clearfix:after {
+	   content: " "; /* Older browser do not support empty content */
+	   visibility: hidden;
+	   display: block;
+	   height: 0;
+	   clear: both;
+	}
+
+/*CAST PAGE*/
+
+	.content-cast{
+		top:80px;
+		padding:12px 0 40px 0;
+
+		h2{
+			font-size:35px;
+		}
+
+		img{
+			border:2px solid white;
+		}
+
+		p{
+			font-size: 23px;
+
+			&:nth-of-type(2n){
+				font-size:19px;
+			}
+		}
+	}
+
+	#cast-body footer{
+		top:52px;
+	}
+
+}

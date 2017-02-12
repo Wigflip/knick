@@ -4,31 +4,32 @@ module.exports = function(grunt){
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 
-		/*concat: {
+		concat: {
 			//2. Configuration for concatinating files goes here.
 			dist:{
 				src: [
+				'js/build/jquery-1.12.0.min.js',
 				'js/global.js',
-				'js/jquery-1.12.0.min.js'
+				'js/mobile.js',
 				],
-				dest: 'js/build/production.js'
+				dest: 'js/production.js'
 			}
 		},
 
 		uglify: {
    			 build: {
-        		src: 'js/build/production.js',
-        		dest: 'js/build/production.min.js'
+        		src: 'js/production.js',
+        		dest: 'js/production.min.js'
     		}
-		},*/
+		},
 
 		sass: {
 		    dist: {
 		        options: {
-		            style: 'nested'
+		            style: 'compressed'
 		        },
 		        files: {
-		            'css/build/global.css': 'css/global.scss'
+		            'css/global.css': 'css/global.scss'
 		        }
 		    } 
     	},
@@ -62,7 +63,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	
 	//4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-	grunt.registerTask('default', ['sass','watch']);
+	grunt.registerTask('default', ['sass','watch','concat','uglify']);
 	grunt.registerTask('prod', ['concat', 'uglify','sass','watch']);
 
 };

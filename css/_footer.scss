@@ -1,17 +1,30 @@
 footer{
-	height:200px;
 	width:100%;
 	background-color:white !important; 
 	color:black;
 	text-align: center;
 	padding-top:30px;
 
-	div{
-	margin:20px 0 0 0;
+	.desktop-footer{
+		margin:20px 0 0 0;
+
+		a, a:visited{
+		color:black;
+		padding:0px 10px;
+		font-weight:bold;
+		}
 	}
 
-	a, a:visited{
-	color:black;
-	padding:0px 10px;
-	font-weight:bold;}
 }	
+
+@media screen and (min-width:1025px){
+
+footer{	
+	height:200px;
+}
+
+	.mobile-footer{
+		display:none;
+	}
+
+}

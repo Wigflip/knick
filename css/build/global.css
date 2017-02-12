@@ -1,13 +1,13 @@
 /* CSS Document */
 @font-face {
   font-family: 'Knick';
-  src: url("../../fonts/Knick.ttf") format("truetype"); }
+  src: url("../fonts/Knick.ttf") format("truetype"); }
 @font-face {
   font-family: 'Heroic';
-  src: url("../../fonts/Heroic.ttf") format("truetype"); }
+  src: url("../fonts/Heroic.ttf") format("truetype"); }
 /*Cast Page*/
 #cast-body {
-  background: #161717 url(../../images/background/knick2.jpg) no-repeat center top;
+  background: #161717 url(../images/background/knick2.jpg) no-repeat center top;
   background-size: cover;
   background-position: 0 -120px; }
   #cast-body footer {
@@ -39,7 +39,7 @@
   padding-top: 70px; }
 
 #home-body {
-  background: black url("../../images/background/thack.jpg") no-repeat center top;
+  background: black url("../images/background/thack.jpg") no-repeat center top;
   background-size: cover; }
 
 a, a:visited {
@@ -59,6 +59,8 @@ header, .header-fixed {
     margin: 10px 0 0 0;
     font-size: 30px;
     font-family: 'Heroic'; }
+  header h3, .header-fixed h3 {
+    display: none; }
 
 .header-fixed {
   top: -150px;
@@ -205,65 +207,193 @@ nav {
   border-top: 1px solid #777676;
   height: auto; }
 
-@media screen and (min-device-width: 768px) and (max-width: 1024px) {
-  h1 {
-    text-align: center; }
+.mobile-nav {
+  display: none; }
 
-  .main-video {
-    height: 350px; }
+.mobile-content {
+  display: none; }
 
+@media screen and (max-width: 1440px) {
   .video-js {
     width: 100%;
-    height: 325px; }
+    height: 374.5px;
+    margin: 0; } }
+@media screen and (min-width: 350px) and (max-width: 906px) {
+  /*HOMEPAGE*/
+  #home-body {
+    background: none; }
 
-  .bars, .content, .content-cast, .sidebar {
-    width: 100%;
-    float: none;
-    height: auto; }
+  nav, .about-social, .featured-extras, .header-fixed {
+    display: none; }
 
-  .content, .content-cast {
-    padding: 5px 0 0 0; }
-    .content p, .content-cast p {
-      text-align: center; }
-    .content img, .content-cast img {
-      display: block;
-      margin: 0 auto; }
-
-  .sidebar {
-    padding: 0 10px;
-    height: auto; }
-
-  .cinemax-logo {
-    width: 150px;
-    position: absolute;
-    left: -10px;
-    top: -20px;
-    z-index: 899; }
-
-  .twitter {
-    display: none;
-    border: none; }
-
-  .about {
-    border: none; }
-    .about .info {
-      float: left;
-      width: 50%; }
-    .about .extra-info {
+  header, .header-fixed {
+    height: 80px;
+    background-color: black;
+    z-index: 999; }
+    header h3, .header-fixed h3 {
+      position: relative;
+      top: -14px;
+      padding-right: 24px;
+      display: inline;
       float: right;
-      width: 50%; } }
+      text-transform: uppercase;
+      font-family: 'Heroic';
+      font-size: 24px;
+      -webkit-user-select: none;
+      /* Chrome/Safari */ }
+
+  .logo {
+    display: block;
+    text-align: center; }
+    .logo img {
+      height: 41px;
+      width: 141px; }
+    .logo h2 {
+      display: none; }
+
+  .mobile-nav {
+    position: fixed;
+    top: -57px;
+    /*left:1000%; slide in panel from left*/
+    height: 56px;
+    width: 100%;
+    padding: 10px;
+    display: block;
+    background-color: black;
+    z-index: 99;
+    transition: top .3s;
+    text-align: center;
+    border-top: 1px solid white; }
+    .mobile-nav a {
+      font-family: 'Heroic';
+      text-transform: uppercase;
+      font-size: 24px;
+      padding: 0 16px; }
+
+  body.open-panel .mobile-nav {
+    /*left:59%; slide in panel from left*/
+    top: 80px; }
+
+  main {
+    position: relative;
+    top: 80px;
+    overflow-x: hidden; }
+
+  .video {
+    height: 200px;
+    width: 100%; }
+    .video .main-video {
+      top: 0;
+      height: 100%;
+      width: 100%; }
+      .video .main-video h2 {
+        font-size: 25px; }
+    .video .cinemax-logo {
+      display: none; }
+    .video .video-js {
+      height: 100%; }
+
+  .mobile-content {
+    height: 400px;
+    padding: 0 20px;
+    margin: 32px 0 0 0;
+    display: block; }
+    .mobile-content .title {
+      font-family: 'Heroic';
+      font-size: 25px;
+      padding: 10px 9px;
+      border-top: 1px solid grey;
+      text-transform: uppercase; }
+    .mobile-content hr {
+      width: 97%; }
+    .mobile-content .mobile-main {
+      margin-bottom: 20px; }
+      .mobile-content .mobile-main img {
+        width: 100%;
+        border: 1px solid white; }
+      .mobile-content .mobile-main h4 {
+        padding: 10px 0;
+        margin: 0 0;
+        color: #8c8a8a;
+        font-size: 20px; }
+      .mobile-content .mobile-main p {
+        font-size: 0.875rem; }
+    .mobile-content .mobile-feature {
+      margin: 0 0 25px 0; }
+      .mobile-content .mobile-feature img {
+        height: 60px;
+        border: 1px solid white;
+        float: left; }
+      .mobile-content .mobile-feature span {
+        padding: 0 10px;
+        font-size: 16px; }
+        .mobile-content .mobile-feature span:nth-of-type(1) {
+          color: grey; }
+
+  footer {
+    position: relative;
+    height: 145px;
+    top: 80px;
+    padding: 15px 5px; }
+    footer span {
+      margin: -12px 0 18px 0;
+      display: block; }
+    footer img {
+      height: 30px;
+      width: auto; }
+    footer .desktop-footer {
+      display: none; }
+    footer p {
+      font-size: 12px; }
+    footer .mobile-footer {
+      margin: 10px;
+      font-size: 12px; }
+      footer .mobile-footer a {
+        padding: 0 9px;
+        color: black;
+        font-weight: bold; }
+
+  .clearfix:after {
+    content: " ";
+    /* Older browser do not support empty content */
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both; }
+
+  /*CAST PAGE*/
+  .content-cast {
+    top: 80px;
+    padding: 12px 0 40px 0; }
+    .content-cast h2 {
+      font-size: 35px; }
+    .content-cast img {
+      border: 2px solid white; }
+    .content-cast p {
+      font-size: 23px; }
+      .content-cast p:nth-of-type(2n) {
+        font-size: 19px; }
+
+  #cast-body footer {
+    top: 52px; } }
 footer {
-  height: 200px;
   width: 100%;
   background-color: white !important;
   color: black;
   text-align: center;
   padding-top: 30px; }
-  footer div {
+  footer .desktop-footer {
     margin: 20px 0 0 0; }
-  footer a, footer a:visited {
-    color: black;
-    padding: 0px 10px;
-    font-weight: bold; }
+    footer .desktop-footer a, footer .desktop-footer a:visited {
+      color: black;
+      padding: 0px 10px;
+      font-weight: bold; }
+
+@media screen and (min-width: 1025px) {
+  footer {
+    height: 200px; }
+
+  .mobile-footer {
+    display: none; } }
 
 /*# sourceMappingURL=global.css.map */

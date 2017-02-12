@@ -2,11 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Knick - Cinemax's New Original Series | Cinemax</title>
   <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link href="http://vjs.zencdn.net/5.5.3/video-js.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/build/global.css" />
+  <link rel="stylesheet" href="css/global.css" />
 </head>
 
 <body id="home-body">
@@ -14,20 +15,27 @@
    <div class="row">
      <div class="small-12 columns">
         <nav>
-           <a href="cast.html">Cast & Crew</a>
+           <a href="cast.html" rel="external">Cast & Crew</a>
            <a href="">Episodes</a>
            <a href="">Video</a>                       
         </nav>
         <div class="logo">
-          <a href="index.html">
-            <img src="images/logos/knick-tumblr-knick-logo.png">
-          </a>  
+          <img src="images/logos/knick-tumblr-knick-logo.png">
           <h2>Fridays at 10PM on Cinemax</h2>
-        </div>    
+        </div> 
+        <h3>Menu</h3>   
      </div>    
-   </div>    
+   </div>     
  </header>
 
+  <div class="mobile-nav">
+    <a href="index.html" rel="external">home</a>
+    <a href="#">about</a>
+    <a href="#">videos</a>
+    <a href="cast.html" rel="external">cast</a>
+ </div>
+
+<main>
  <section class="video">
     <div class="main-video">
       <img class="cinemax-logo" src="images/logos/cinemax.png">    
@@ -39,7 +47,7 @@
     </div> 
  </section>
  <section class="content">    
-     <div class="row">
+    <div class="row">
       <div class="about-social small-4 columns">
         <div class="about clearfix">
           <h1>About</h1>
@@ -60,14 +68,14 @@
       <div class="featured-extras small-8 columns">
         <h1>Featured</h1>
         <div class="row featured small-up-2 medium-up-4 large-up-4  ">
-         <div class="column" data-video="videos/trailer.mp4">
+         <div class="column" data-video="videos/trailer.mp4" data-name="Episode 10 Preview">
          <div class="picture">
            <span class="play-button-overlay"></span> 
            <img src="images/home-thumbs/OST.jpg" class="thumbnail" alt="">
           </div> 
           <p>Episode 10 Preview</p>
          </div>
-         <div class="column">
+         <div class="column" data-name="Episode 9 Preview" data-video="videos/trailer.mp4">
           <div class="picture">
            <span class="play-button-overlay"></span> 
            <img src="images/home-thumbs/1.jpg" class="thumbnail" alt="">
@@ -195,27 +203,68 @@
          </div>             
         </div>
        </div>
-     </div>
+      </div>
+      <div class="mobile-content small-up-1 medium-up-2">
+        <hr>
+        <div class="mobile-main column">
+          <img src="images/home-thumbs/e9.jpg">
+          <h4>Michael Agarano Q&A</h4>
+          <p>Find out what the actor had to say about Dr. Chicken and his future in season 2.</p>
+        </diV> 
+        <div class="mobile-main column">
+          <img src="images/home-thumbs/e8.jpg">
+          <h4>BurnsArchive.com</h4>
+          <p>Explore the early days of modern medicine through haunting photos.</p>
+        </diV> 
+        <hr>
+        <div class="mobile-feature column clearfix" data-name="The Knick Season 2 Trailer" data-video="videos/trailer.mp4" />
+          <img src="images/home-thumbs/e11.jpg">
+          <span>Trailer</span><br>
+          <span>The Knick Season 2</span>
+        </div>
+        <div class="mobile-feature column clearfix" data-name="Episode 7 Preview">
+          <img src="images/home-thumbs/e8.jpg">
+          <span>Preview</span><br>
+          <span>Episode 7</span>
+        </div> 
+        <div class="mobile-feature column clearfix">
+          <img src="images/home-thumbs/e7.jpg">
+          <span>Extra</span><br>
+          <span>The Knick Podcast</span>
+        </div> 
+        <div class="mobile-feature column clearfix">
+          <img src="images/home-thumbs/e6.jpg">
+          <span>Extra</span><br>
+          <span>The Knick Twitter</span>
+        </div>   
+      </div>  
     </div>  
   </section>
+</main>
 
 <footer>
   <span>
      <img src="images/logos/cinemax.png">
   </span>
-  <div>
+  <div class="desktop-footer">
     <a href="">Movies</a>
     <a href="">Original Series</a>
     <a href="">Schedule</a>
     <a href="">Privacy Policy</a>
     <a href="">Terms of use</a>
   </div>
-<p>© 2016 Home Box Office, Inc. All Rights Reserved. This website may contain mature content.</p>
+  <div class="mobile-footer">
+    <a href="">Original Series</a>
+    <a href="">Privacy Policy</a>
+    <a href="">Terms of use</a>
+  </div> 
+  <p>© 2016 Home Box Office, Inc. All Rights Reserved. This website may contain mature content.</p>
 </footer>
 
 <script src="js/build/jquery-1.12.0.min.js"></script>
 <script src="js/global.js"></script>
+<script src="js/mobile.js"></script>
 <script src="http://vjs.zencdn.net/5.5.3/video.js"></script>
-<script src="js/vendor/modernizr.js"></script>
+<!--<script src="js/vendor/modernizr.js"></script>-->
 </body>
 </html>
